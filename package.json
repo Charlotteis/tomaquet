@@ -1,11 +1,7 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-
-  "name": "my-glitch-app",
+  "name": "tomaquet",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Pomodoro Tracker built in React",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -21,12 +17,13 @@
     "node": "6.9.x"
   },
   "repository": {
-    "url": "https://glitch.com/#!/project/create-react-app"
+    "url": "https://github.com/charlotteis/tomaquet"
   },
-  "license": "MIT",
+  "license": "CC0-1.0",
   "keywords": [
     "node",
     "glitch",
-    "react"
+    "react",
+    "pomodoro"
   ]
 }
