@@ -13,7 +13,7 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <button className='pure-button pure-button-primary'>Wow</button>
+        <button className='pure-button black bg-orange'>Wow</button>
       </div>
     )
   }
