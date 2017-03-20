@@ -1,3 +1,4 @@
+/* globals localStorage */
 import humanizeTime from 'humanize-time'
 import React, { Component } from 'react'
 import './Pomo.css'
@@ -16,7 +17,7 @@ class Pomo extends Component {
     this.stopPomo = this.stopPomo.bind(this)
     this.resetPomo = this.resetPomo.bind(this)
   }
-  
+
   componentWillUnmount () {
     clearInterval(this.timer)
     this.timer = undefined
@@ -24,11 +25,11 @@ class Pomo extends Component {
 
   setTime () {
     const time = localStorage.getItem('time')
-    
+
     if (time && time >= 1000) {
       return time
     }
-    
+
     return TWENTY_FIVE_MINS
   }
 
@@ -42,12 +43,12 @@ class Pomo extends Component {
       }
     }, 1000)
   }
-  
+
   stopPomo () {
     clearInterval(this.timer)
     this.timer = undefined
   }
-  
+
   resetPomo () {
     clearInterval(this.timer)
     this.timer = undefined
@@ -59,18 +60,18 @@ class Pomo extends Component {
 
   render () {
     return (
-      <section className='timer'>
+      <section>
         <h2>Timer</h2>
         <span className='timer__time'>{ humanizeTime(this.state.time) }</span>
         <div className='timer__controls'>
           <button
-            className='pure-button black bg-green'
+            className='timer__control pure-button black bg-green'
             onClick={this.startPomo}>Start</button>
           <button
-            className='pure-button black bg-red'
+            className='timer__control pure-button black bg-red'
             onClick={this.stopPomo}>Stop</button>
           <button
-            className='pure-button black bg-yellow'
+            className='timer__control pure-button black bg-yellow'
             onClick={this.resetPomo}>Reset</button>
         </div>
       </section>

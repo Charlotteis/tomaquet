@@ -1,7 +1,3 @@
-.timer {
-  text-align: center;
-}
-
 .timer__time {
   display: block;
 }
@@ -10,10 +6,10 @@
   margin-top: 15px;
 }
 
-.timer__controls button {
+.timer__control {
   margin-right: 15px;
 }
 
-.timer__controls button:last-of-type {
+.timer__control:last-of-type {
   margin: 0;
 }
