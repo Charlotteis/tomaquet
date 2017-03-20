@@ -10,10 +10,11 @@ class Pomo extends Component {
       time: 1500000 // 25 minutes, in miliseconds
     }
 
-    this.countDown = this.countDown.bind(this)
+    this.startPomo = this.startPomo.bind(this)
+    this.stopPomo = this.stopPomo.bind(this)
   }
 
-  countDown () {
+  startPomo () {
     if (this.timer) return
     this.timer = setInterval(() => {
       if (this.state.time >= 1000) {
@@ -22,15 +23,25 @@ class Pomo extends Component {
       }
     }, 1000)
   }
+  
+  stopPomo () {
+    clearInterval(this.timer)
+    this.timer = undefined
+  }
 
   render () {
     return (
       <section className='timer'>
         <h2>Timer</h2>
         <span className='timer__time'>{ humanizeTime(this.state.time) }</span>
-        <button
-          className='pure-button black bg-green timer__start'
-          onClick={this.countDown}>Start</button>
+        <div className='timer__controls'>
+          <button
+            className='pure-button black bg-green'
+            onClick={this.startPomo}>Start</button>
+          <button
+            className='pure-button black bg-red'
+            onClick={this.stopPomo}>Stop</button>
+        </div>
       </section>
     )
   }
