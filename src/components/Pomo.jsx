@@ -2,16 +2,19 @@ import humanizeTime from 'humanize-time'
 import React, { Component } from 'react'
 import './Pomo.css'
 
+const TWENTY_FIVE_MINS = 1500000 // 25 minutes, in miliseconds
+
 class Pomo extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      time: 1500000 // 25 minutes, in miliseconds
+      time: TWENTY_FIVE_MINS
     }
 
     this.startPomo = this.startPomo.bind(this)
     this.stopPomo = this.stopPomo.bind(this)
+    this.resetPomo = this.resetPomo.bind(this)
   }
 
   startPomo () {
@@ -28,6 +31,14 @@ class Pomo extends Component {
     clearInterval(this.timer)
     this.timer = undefined
   }
+  
+  resetPomo () {
+    clearInterval(this.timer)
+    this.timer = undefined
+
+    const time = TWENTY_FIVE_MINS
+    this.setState({ time })
+  }
 
   render () {
     return (
@@ -41,6 +52,9 @@ class Pomo extends Component {
           <button
             className='pure-button black bg-red'
             onClick={this.stopPomo}>Stop</button>
+          <button
+            className='pure-button black bg-yellow'
+            onClick={this.resetPomo}>Reset</button>
         </div>
       </section>
     )
