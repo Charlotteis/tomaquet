@@ -1,0 +1,17 @@
+.footer {
+  margin-top: 15px;
+}
+
+.footer__link {
+  margin: 15px 15px 0 5px;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.footer__link:last-of-type {
+  margin-right: 0;
+}
+
+.footer__link:hover {
+  border-bottom: 2px solid;
+}
