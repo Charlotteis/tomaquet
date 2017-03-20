@@ -1,0 +1,11 @@
+.timer {
+  text-align: center;
+}
+
+.timer__time {
+  display: block;
+}
+
+.timer__start {
+  margin-top: 15px;
+}
