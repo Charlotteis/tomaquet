@@ -2,7 +2,7 @@
   "name": "tomaquet",
   "version": "0.0.1",
   "description": "Pomodoro Tracker built in React",
- "scripts": {
+  "scripts": {
     "start": "standard && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
