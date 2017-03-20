@@ -33,5 +33,21 @@
     "glitch",
     "react",
     "pomodoro"
-  ]
+  ],
+  "author": {
+    "name": "Charlotte Spencer",
+    "email": "charlottelaspencer@gmail.com",
+    "twitter": "charlotteis"
+  },
+  "contributors": [
+    {
+      "name": "Charlotte Spencer",
+      "email": "charlottelaspencer@gmail.com",
+      "twitter": "charlotteis"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Charlotteis/tomaquet/issues"
+  },
+  "homepage": "https://github.com/Charlotteis/tomaquet#readme"
 }
