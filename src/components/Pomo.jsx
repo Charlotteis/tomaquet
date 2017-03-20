@@ -9,12 +9,27 @@ class Pomo extends Component {
     super(props)
 
     this.state = {
-      time: TWENTY_FIVE_MINS
+      time: this.setTime()
     }
 
     this.startPomo = this.startPomo.bind(this)
     this.stopPomo = this.stopPomo.bind(this)
     this.resetPomo = this.resetPomo.bind(this)
+  }
+  
+  componentWillUnmount () {
+    clearInterval(this.timer)
+    this.timer = undefined
+  }
+
+  setTime () {
+    const time = localStorage.getItem('time')
+    
+    if (time && time >= 1000) {
+      return time
+    }
+    
+    return TWENTY_FIVE_MINS
   }
 
   startPomo () {
@@ -23,6 +38,7 @@ class Pomo extends Component {
       if (this.state.time >= 1000) {
         const time = (this.state.time - 1000)
         this.setState({ time })
+        localStorage.setItem('time', time.toString())
       }
     }, 1000)
   }
@@ -38,6 +54,8 @@ class Pomo extends Component {
 
     const time = TWENTY_FIVE_MINS
     this.setState({ time })
+    localStorage.setItem('time', time.toString())
+
   }
 
   render () {
