@@ -6,6 +6,14 @@
   display: block;
 }
 
-.timer__start {
+.timer__controls {
   margin-top: 15px;
+}
+
+.timer__controls button {
+  margin-right: 15px;
+}
+
+.timer__controls button:last-of-type {
+  margin: 0;
 }
