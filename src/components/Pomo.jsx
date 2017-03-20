@@ -55,7 +55,6 @@ class Pomo extends Component {
     const time = TWENTY_FIVE_MINS
     this.setState({ time })
     localStorage.setItem('time', time.toString())
-
   }
 
   render () {
