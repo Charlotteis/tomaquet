@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"description": "Pomodoro Tracker built in React",
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "standard && react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject"
@@ -15,6 +15,9 @@
 		"react-dom": "^15.4.2",
 		"react-scripts": "0.9.5"
 	},
+  "devDependencies": {
+    "standard": "^9.0.2"
+  },
 	"engines": {
 		"node": "6.9.x"
 	},
