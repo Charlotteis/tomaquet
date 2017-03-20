@@ -16,7 +16,7 @@ class Pomo extends Component {
   countDown () {
     if (this.timer) return
     this.timer = setInterval(() => {
-      if (this.state.time > 1000) {
+      if (this.state.time >= 1000) {
         const time = (this.state.time - 1000)
         this.setState({ time })
       }
