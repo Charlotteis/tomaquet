@@ -68,7 +68,7 @@ class Pomo extends Component {
             className='timer__control pure-button black bg-green'
             onClick={this.startPomo}>Start</button>
           <button
-            className='timer__control pure-button black bg-red'
+            className='timer__control pure-button black bg-orange'
             onClick={this.stopPomo}>Stop</button>
           <button
             className='timer__control pure-button black bg-yellow'
